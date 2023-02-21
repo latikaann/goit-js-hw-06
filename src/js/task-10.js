@@ -30,9 +30,10 @@ const newBoxes = document.querySelector("#boxes"); //сюда добавить
 createButton.addEventListener("click", onCreateBtnClick);
 destroyButton.addEventListener("click", onDestroyBtnClick);
 //
-let newArray = [];
+
 //
 function createBoxes(amount) {
+  let newArray = [];
   for (let i = 0; i < amount; i++) {
     const newDiv = document.createElement("div");
     newDiv.style.width = `${30 + 10 * i}px`;
@@ -44,8 +45,7 @@ function createBoxes(amount) {
 }
 
 function onCreateBtnClick() {
-  let boxesToAdd = createBoxes(input.value);
-  newBoxes.append(...boxesToAdd);
+  createBoxes(input.value);
 }
 
 function onDestroyBtnClick() {

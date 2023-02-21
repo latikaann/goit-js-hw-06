@@ -19,6 +19,7 @@ function onInputBlur(event) {
     event.currentTarget.value.length ===
     Number(input.getAttribute("data-length"))
   ) {
+    input.classList.remove("invalid");
     input.classList.add("valid");
   } else {
     input.classList.remove("valid");
